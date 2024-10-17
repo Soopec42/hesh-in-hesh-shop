@@ -1,0 +1,28 @@
+#include <iostream>
+#include <list>
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
+
+
+int main()
+{
+	unordered_map<string, unordered_map<string, float>> alf;
+	unordered_map<string, float> tovar_a;
+
+	string literal;
+	string name_product;
+
+	tovar_a["apple"] = 2.94;
+	alf["a"] = tovar_a;
+
+	cout << "literal: ";
+	cin >> literal;
+	cout << "name product: ";
+	cin >> name_product;
+	auto literal_case = alf[literal];
+	cout << literal_case[name_product];
+
+	return 0;
+}
